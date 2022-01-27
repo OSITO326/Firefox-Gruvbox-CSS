@@ -10,14 +10,14 @@ download_mff() {
     if [[ $? -eq 0 ]]; then
         echoerr " [>>] Copying..."
 
-        USERCHROME="/tmp/minimal-functional-fox-master/userChrome.css"
-        USERCONTENT="/tmp/minimal-functional-fox-master/userContent.css"
+        USERCHROME="/tmp/minimal-gruvbox-dark/userChrome.css"
+        USERCONTENT="/tmp/minimal-gruvbox-dark/userContent.css"
         cp -r --backup=simple -t $CHROME_DIRECTORY $USERCHROME $USERCONTENT
         rm -f USERCHROME USERCONTENT
-        cp -r /tmp/minimal-functional-fox-master/* $CHROME_DIRECTORY
+        cp -r /tmp/minimal-gruvbox-dark/* $CHROME_DIRECTORY
 
         if [[ $? -eq 0 ]]; then
-            rm -rf /tmp/minimal-functional-fox-master
+            rm -rf /tmp/minimal-gruvbox-dark
         else
             echoerr " [!!] There was a problem copying the files. Terminating..."
             return 1
@@ -27,19 +27,25 @@ download_mff() {
         return 1
     fi
     cat <<-'EOF'
-            _       _                 _
-  _ __ ___ (_)_ __ (_)_ __ ___   __ _| |
- | '_ ` _ \| | '_ \| | '_ ` _ \ / _` | |
- | | | | | | | | | | | | | | | | (_| | |
- |_|_|_| |_|_|_| |_|_|_| |_| |_|\__,_|_|       _
-  / _|_   _ _ __   ___| |_(_) ___  _ __   __ _| |
- | |_| | | | '_ \ / __| __| |/ _ \| '_ \ / _` | |
- |  _| |_| | | | | (__| |_| | (_) | | | | (_| | |
- |_|_ \__,_|_| |_|\___|\__|_|\___/|_| |_|\__,_|_|
-  / _| _____  __
- | |_ / _ \ \/ /
- |  _| (_) >  <
- |_|  \___/_/\_\
+           _       _                 _  
+          (_)     (_)               | | 
+ _ __ ___  _ _ __  _ _ __ ___   __ _| | 
+| '_ ` _ \| | '_ \| | '_ ` _ \ / _` | | 
+| | | | | | | | | | | | | | | | (_| | | 
+|_| |_| |_|_|_| |_|_|_| __| |_|\__,_|_| 
+                       | |              
+  __ _ _ __ _   ___   _| |__   _____  __
+ / _` | '__| | | \ \ / | '_ \ / _ \ \/ /
+| (_| | |  | |_| |\ V /| |_) | (_) >  < 
+ \__, |_|   \__,_| \_/ |_.__/ \___/_/\_\
+  __/ |                                 
+ |____            _                     
+    | |          | |                    
+  __| | __ _ _ __| | __                 
+ / _` |/ _` | '__| |/ /                 
+| (_| | (_| | |  |   <                  
+ \__,_|\__,_|_|  |_|\_\                 
+                        
 
 EOF
     echoerr " Installation successful! Enjoy :)"
