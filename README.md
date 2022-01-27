@@ -90,14 +90,12 @@ After installation, restart Firefox to see the effects.
 
 ## Customizing
 
-You can easily tweak the theme by changing the relevant CSS variables, starting with `--mff-` located within the :root section at the top of the `userChrome.css` file.
+You can easily tweak the theme by changing the relevant CSS variables, starting with `--background` located within the :root section at the top of the `userChrome.css` file.
 
 ```css
  :root {
      /* Minimal Functional Fox variables*/
-     --mff-bg: #293241;
-     --mff-icon-color: #e0fbfc;
-     --mff-nav-toolbar-padding: 8px;
+     --background: #282828;
      /*
      ...
      ...
