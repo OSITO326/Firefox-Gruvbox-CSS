@@ -39,9 +39,9 @@
   border-radius: 10px;
 }
 
-.tabbrowser-tab[soundplaying="true"] {
-  color: var(--purple-dark) !important;
-}
+/*.tabbrowser-tab[soundplaying="true"] {*/
+  /*color: var(--purple-dark) !important;*/
+/*}*/
 
 .tab-text {
   color: var(--foreground);
