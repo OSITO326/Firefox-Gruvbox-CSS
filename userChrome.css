@@ -24,6 +24,7 @@
 --gray-light: #A89984;
 --blue-arch: #1793D1;
 --green-spotify: #1DB954;
+--hover-color: #3C3A36;
 --newtab-textbox-background-color: var(--background);
 }
 
@@ -51,6 +52,12 @@
   color: var(--blue-dark);
 }
 
+hbox.tab-content:hover {
+  /*background-color: var(--hover-color) !important;*/
+  border: 2px solid var(--blue-dark);
+  border-radius: 10px;
+}
+
 #tabbrowser-tabs {
   --tab-loading-fill: var(--blue-dark) !important;
 }
@@ -67,12 +74,24 @@
   border: none !important;
 }
 
+#back-button:hover {
+  background-color: var(--hover-color) !important;
+}
+
 #back-button {
   list-style-image: url("left-arrow.svg") !important;
 }
 
 #forward-button {
   list-style-image: url("right-arrow.svg") !important;
+}
+
+#forward-button:hover {
+  background-color: var(--hover-color) !important;
+}
+
+#reload-button:hover {
+  background-color: var(--hover-color) !important;
 }
 
 /* New Tab Flash */
@@ -82,7 +101,7 @@
 #tabbrowser-tabpanels,
 browser[type=content-primary],
 browser[type=content] > html{
-    background: var(--background) !important
+  background: var(--background) !important
 }
 
 /* This positions the tabs under the navaigator container */
@@ -91,13 +110,13 @@ browser[type=content] > html{
 }
 
 .tab-line {
-display : none !important;
+  display : none !important;
 }
 
 /* Toolbar buttons */
 .toolbarbutton-1 {
-    fill: var(--foreground) !important;
-    background-color: var(--background) !important;
+  fill: var(--foreground) !important;
+  background-color: var(--background) !important;
 }
 
 /* Remove border under navbar */
@@ -133,21 +152,19 @@ background-color: var(--background) !important;
   display: none !important;
 
 }
-tab
-{
-    height:3rem;
-    background-color: var(--background) !important;
-    font-weight: thin !important;
-    color : var(--foreground) !important;
-}
 
+tab{
+  height:3rem;
+  background-color: var(--background) !important;
+  font-weight: thin !important;
+  color : var(--foreground) !important;
+}
 
 .tab-content[selected="true"]
 {
-
-    background-color: var(--background) !important;
-    font-weight: bold !important;
-    color : var(--foreground) !important;
+  background-color: var(--background) !important;
+  font-weight: bold !important;
+  color : var(--foreground) !important;
 }
 
 #nav-bar-customization-target {
@@ -198,16 +215,18 @@ toolbarbutton.scrollbutton-down{ background-color: transparent !important;}
   -moz-box-ordinal-group: 3 !important;
 }
 */
+
 #navigator-toolbox{
   margin-top: 0px;
   padding-top:0px !important;
 }
+
 #toolbar-menubar{
   position: fixed;
   top: 0px;
 }
-/*#navigator-toolbox { --tabs-border-color: transparent !important; }*//* remove weird line*/
 
+/*#navigator-toolbox { --tabs-border-color: transparent !important; }*//* remove weird line*/
 
 
 /*Hide tabs bar if one tab is opened
@@ -231,36 +250,66 @@ toolbarbutton.scrollbutton-down{ background-color: transparent !important;}
   | || (_) | (_) | |__| _ \/ _ \|   /
   |_| \___/ \___/|____|___/_/  \_\_|_\
 */
+toolbarbutton:hover {
+  background-color: var(--hover-color) !important;
+}
 
 #navigator-toolbox {
---tabs-border-color: var(--orange-dark) !important;
+  --tabs-border-color: var(--orange-dark) !important;
 
 }
+
 toolbarseparator {
-display: none !important;
+  display: none !important;
 }
-.panel-arrowcontainer {
-background-color: var(--background) !important;
-}
-#PopupAutoComplete {
-background-color: var(--background) !important;
-}
-#PopupSearchAutoComplete {
 
-background-color: var(--background) !important;
+.panel-arrowcontainer {
+  background-color: var(--background) !important;
+}
+
+#PopupAutoComplete {
+  background-color: var(--background) !important;
+}
+
+#PopupSearchAutoComplete {
+  background-color: var(--background) !important;
 }
 
 #PanelUI-button {
-border:none !important;
-margin-inline-start: 0px !important;
-padding-inline-start: 0px !important;
+  border:none !important;
+  margin-inline-start: 0px !important;
+  padding-inline-start: 0px !important;
 }
+
 .urlbarView {
 /*background: var(--background) !important;*/
 }
 
-panelview {
-
-background-color:#282828 !important;
+.urlbarView-row[type="bookmark"] > span{
+  color: var(--green-dark) !important;
 }
+
+.urlbarView-row[type="switchtab"] > span{
+  color: var(--orange-dark) !important;
+}
+
+#urlbar-input {
+  color: var(--foreground) !important;
+  text-align: center !important;
+}
+
+#urlbar {
+  max-width: 70% !important;
+  margin: 0 15% !important;
+  /* 	position: unset!important; */;
+}
+
+#urlbar-input:focus {
+  color: var(--foreground) !important;
+}
+
+panelview {
+  background-color:#282828 !important;
+}
+
 --panel-separator-color: none !important;
