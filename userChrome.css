@@ -63,6 +63,10 @@ hbox.tab-content:hover {
 }
 
 /*buttons*/
+#tabs-newtab-button:hover {
+  background-color: var(--hover-color) !important;
+}
+
 #tabs-newtab-button {
   list-style-image: url("add.svg") !important;
   opacity: 0.7;
@@ -256,7 +260,17 @@ toolbarbutton:hover {
 
 #navigator-toolbox {
   --tabs-border-color: var(--orange-dark) !important;
+}
 
+/*Remove nightab extension information*/
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button {
+  background: transparent !important; 
+  padding-left:3px !important; 
+  padding-right:4px !important; 
+}
+
+#identity-box.extensionPage label{
+  display: none !important; 
 }
 
 toolbarseparator {
@@ -299,9 +313,9 @@ toolbarseparator {
 }
 
 #urlbar {
-  max-width: 70% !important;
-  margin: 0 15% !important;
-  /* 	position: unset!important; */;
+  max-width: 80% !important;
+  margin: 0 10% !important;
+	/*position: unset!important;*/
 }
 
 #urlbar-input:focus {
